@@ -27,14 +27,14 @@ module universal_shift_register_tb;
     $dumpfile("dump.vcd"); $dumpvars;
 
     D = 4'b0000;
-    control = 3'b000; //Set Control Here
+    control = 3'b100; //Set Control Here
     clk = 0;
     reset = 1;
 
 
     #2 reset = 0;
 
-    #10 D = 4'b0000;
+    #10 D = 4'b0011;
     
     #20 D = 4'b1000;
 
@@ -48,4 +48,3 @@ module universal_shift_register_tb;
   end
 
 endmodule
-

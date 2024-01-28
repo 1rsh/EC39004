@@ -17,10 +17,10 @@ module univ_shift_register (
         3'b001: internal_reg <= data;  // Parallel load
         3'b010: internal_reg <= {internal_reg[2:0], data[0]};  // Serial load
         3'b011: internal_reg <= {internal_reg[2:0], data[3]};  // Shift left
-        3'b100: internal_reg <= {data[3], internal_reg[2:0]};  // Shift right
-        3'b101: internal_reg <= ~internal_reg;  // Invert
-        3'b110: internal_reg <= {internal_reg[3:1], 1'b0};  // Multiply by 2 (Same as Shift left)
-        3'b111: internal_reg <= {1'b0, internal_reg[3:1]};  // Divide by 2 (Same as Shift right)
+        3'b100: internal_reg <= {data[3], internal_reg[3:1]};  // Shift right
+        3'b101: internal_reg <= ~data;  // Invert
+        3'b110: internal_reg <= data << 1;  // Multiply by 2 (Same as Shift left)
+        3'b111: internal_reg <= data >> 1;  // Divide by 2
       endcase
     end
   end
