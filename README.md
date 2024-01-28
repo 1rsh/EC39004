@@ -1,4 +1,4 @@
-# Embedded Systems Lab Spring 24
+# VLSI Laboratory Spring 24
 The following repository is created for the course EC39004 - VLSI Laboratory. <br>
 **Session:** Spring 2024
 ****
