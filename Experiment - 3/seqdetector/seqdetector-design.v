@@ -50,12 +50,12 @@ module seqdetector(
               begin
                 if(X==0)
                   begin
-                    state <= S3;
+                    state <= S1;
                     detect <= 0;
                   end
                 else
                   begin
-                    state <= S0;
+                    state <= S3;
                     detect <= 0;
                   end
               end
@@ -69,7 +69,7 @@ module seqdetector(
                   end
                 else
                   begin
-                    state <= S0;
+                    state <= S1;
                     detect <= 0;
                   end
               end
@@ -83,7 +83,7 @@ module seqdetector(
                 else
                   begin
                     state <= S0;
-                    detect <= 0;
+                    detect <= 1;
                   end
               end
           endcase
